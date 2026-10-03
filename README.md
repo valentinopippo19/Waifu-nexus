@@ -1042,3 +1042,6 @@ Un pequeño laboratorio de diseño orientado a objetos disfrazado de juego de an
 <img width="1536" height="1024" alt="Interfaz de batalla anime en Waifu Nexus" src="https://github.com/user-attachments/assets/d5e9de61-8d9d-458a-bddf-3437f0b23d06" />
 
 <img width="1536" height="1024" alt="Montaje del flujo de Waifu Nexus" src="https://github.com/user-attachments/assets/5c1d0f4c-35b7-46de-8377-4da7693052d7" />
+
+
+
