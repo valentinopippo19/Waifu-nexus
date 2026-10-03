@@ -1,3 +1,5 @@
+
+https://github.com/user-attachments/assets/5043bf26-7d68-4676-bfe5-b4ad25cd2026
 # Waifu Nexus OO
 
 Proyecto académico en Java 17 para practicar Análisis y Diseño Orientado a Objetos
@@ -1043,4 +1045,4 @@ Un pequeño laboratorio de diseño orientado a objetos disfrazado de juego de an
 
 <img width="1536" height="1024" alt="Montaje del flujo de Waifu Nexus" src="https://github.com/user-attachments/assets/5c1d0f4c-35b7-46de-8377-4da7693052d7" />
 
-https://github.com/user-attachments/assets/f94af334-8a8d-478a-afe4-1a9ca86b9331
+Uploading Idol.mp4…
