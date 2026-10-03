@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Waifu Nexus — Battle Arena</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <section id="landing" class="screen active">
+      <header class="hero">
+        <div class="eyebrow">ANIME TACTICAL BATTLE</div>
+        <h1>WAIFU <span>NEXUS</span></h1>
+        <p class="lead">Reuní a tus personajes, elegí tu escuadrón y enfrentate en combates por turnos.</p>
+        <p class="description">Una arena de fantasía donde seis guerreras de distintos mundos convergen en el Nexus. Cada una tiene su propio elemento, estadísticas, estilo de combate y una historia dentro de su universo.</p>
+      </header>
+
+      <div class="characters-wrap">
+        <div class="section-heading"><span>01</span><h2>PERSONAJES</h2></div>
+        <div id="characterGrid" class="character-grid"></div>
+      </div>
+
+      <div class="media-config">
+        <div class="section-heading"><span>02</span><h2>OPENING & ENDING</h2></div>
+        <p class="muted">Podés seleccionar un video para reproducirlo al iniciar la partida y otro para reproducirlo al terminar. Los archivos se usan localmente en tu navegador.</p>
+        <div class="media-grid">
+          <label class="upload-card">
+            <strong>🎬 VIDEO OPENING</strong>
+            <span id="openingName">Sin video seleccionado</span>
+            <input id="openingInput" type="file" accept="video/*">
+          </label>
+          <label class="upload-card">
+            <strong>🎞️ VIDEO ENDING</strong>
+            <span id="endingName">Sin video seleccionado</span>
+            <input id="endingInput" type="file" accept="video/*">
+          </label>
+        </div>
+      </div>
+
+      <div class="start-area">
+        <div class="start-buttons"><button id="playButton" class="primary big">▶ JUGAR AL JUEGO</button><button id="continueButton" class="secondary big" hidden>↻ CONTINUAR COMBATE</button></div>
+        <p>Primero vas a poder seleccionar tu equipo. Si cargaste un opening, se reproducirá antes del combate.</p>
+      </div>
+    </section>
+
+    <section id="mediaScreen" class="screen media-screen">
+      <video id="mediaPlayer" playsinline></video>
+      <div class="media-overlay">
+        <div class="eyebrow" id="mediaEyebrow">OPENING</div>
+        <h2 id="mediaTitle">WAIFU NEXUS</h2>
+        <button id="skipMedia" class="secondary">SALTAR ▶</button>
+      </div>
+    </section>
+
+    <section id="selection" class="screen">
+      <div class="topbar"><button class="icon-btn" data-home>⌂</button><div><span class="eyebrow">03 · TEAM BUILD</span><h2>Elegí tus equipos</h2></div></div>
+      <p class="muted">Seleccioná entre 1 y 3 personajes para cada lado. Una misma waifu no puede estar en ambos equipos.</p>
+      <div class="team-selection">
+        <div class="team-panel"><div class="panel-title">TU EQUIPO <span id="allyCount">0/3</span></div><div id="allyOptions" class="select-grid"></div></div>
+        <div class="vs">VS</div>
+        <div class="team-panel enemy-panel"><div class="panel-title">EQUIPO ENEMIGO <span id="enemyCount">0/3</span></div><div id="enemyOptions" class="select-grid"></div></div>
+      </div>
+      <button id="startBattle" class="primary big" disabled>⚔ COMENZAR COMBATE</button>
+    </section>
+
+    <section id="battle" class="screen">
+      <div class="topbar"><div><span class="eyebrow">04 · BATTLE ARENA</span><h2 id="turnTitle">TURNO 1</h2></div><button class="secondary" data-home>⌂ INICIO</button></div>
+      <div class="battle-status" id="battleStatus">Seleccioná atacante, objetivo y estrategia.</div>
+      <div class="battlefield">
+        <div class="fighters"><div class="team-panel"><div class="panel-title">TU EQUIPO</div><div id="allyCards" class="combat-cards"></div></div><div class="battle-vs">VS</div><div class="team-panel enemy-panel"><div class="panel-title">ENEMIGAS</div><div id="enemyCards" class="combat-cards"></div></div></div>
+        <aside class="log-panel"><div class="panel-title">📜 REGISTRO</div><div id="combatLog"></div></aside>
+      </div>
+      <div class="actions">
+        <label>ATACANTE<select id="attackerSelect"></select></label>
+        <label>OBJETIVO<select id="targetSelect"></select></label>
+        <label>ESTRATEGIA<select id="strategySelect"><option>AGRESIVA</option><option selected>EQUILIBRADA</option><option>DEFENSIVA</option></select></label>
+        <button id="attackButton" class="primary">⚔ ATACAR</button>
+        <button id="healButton" class="heal">💚 CURAR</button>
+        <button id="saveButton" class="secondary">💾 GUARDAR</button>
+      </div>
+    </section>
+
+    <section id="result" class="screen result-screen">
+      <div class="eyebrow">05 · RESULTADO</div><h2 id="resultTitle">VICTORIA</h2><p id="resultSubtitle"></p><div id="resultCards" class="result-cards"></div><div id="resultScore" class="score"></div><button id="resultHome" class="primary big">🏠 VOLVER A JUGAR</button>
+    </section>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

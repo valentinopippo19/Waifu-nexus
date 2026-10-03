@@ -1,0 +1,10 @@
+WAIFU NEXUS - VERSION WEB PORTABLE
+
+1. Haz doble clic en JUGAR_WAIFU_NEXUS.bat.
+2. El lanzador busca Java 21 instalado, JAVA_HOME, la JRE de VS Code y finalmente un runtime portable.
+3. Inicia el servidor web y abre automaticamente http://localhost:8080.
+
+No necesitas Maven.
+
+IMPORTANTE:
+Si Windows no tiene Java 21 y tampoco hay un runtime portable incluido, instala Java 21 una sola vez.
